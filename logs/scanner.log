@@ -6,3 +6,51 @@
 2026-01-03 13:37:51,176 - __main__ - ERROR - Error accediendo a https://traffic-data.es/api/v16: HTTPSConnectionPool(host='traffic-data.es', port=443): Max retries exceeded with url: /api/v16 (Caused by NameResolutionError("HTTPSConnection(host='traffic-data.es', port=443): Failed to resolve 'traffic-data.es' ([Errno -2] Name or service not known)"))
 2026-01-03 13:37:51,176 - __main__ - INFO - Probando controles de rate limiting...
 2026-01-03 13:37:54,922 - __main__ - WARNING - No se detectó rate limiting
+2026-01-03 14:24:30,279 - __main__ - INFO - Configuración cargada correctamente
+2026-01-03 14:24:30,279 - __main__ - INFO - Iniciando escaneo completo de seguridad V16
+2026-01-03 14:24:30,279 - __main__ - INFO - Verificando exposición de datos...
+2026-01-03 14:24:30,542 - __main__ - ERROR - Error accediendo a https://etraffic.dgt.es/etrafficWEB/: Expecting value: line 1 column 1 (char 0)
+2026-01-03 14:24:30,580 - __main__ - ERROR - Error accediendo a https://api.dgt.es/v1/incidents: HTTPSConnectionPool(host='api.dgt.es', port=443): Max retries exceeded with url: /v1/incidents (Caused by NameResolutionError("HTTPSConnection(host='api.dgt.es', port=443): Failed to resolve 'api.dgt.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:24:30,651 - __main__ - ERROR - Error accediendo a https://traffic-data.es/api/v16: HTTPSConnectionPool(host='traffic-data.es', port=443): Max retries exceeded with url: /api/v16 (Caused by NameResolutionError("HTTPSConnection(host='traffic-data.es', port=443): Failed to resolve 'traffic-data.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:24:30,652 - __main__ - INFO - Probando controles de rate limiting...
+2026-01-03 14:24:34,198 - __main__ - WARNING - No se detectó rate limiting
+2026-01-03 14:25:55,545 - __main__ - INFO - Configuración cargada correctamente
+2026-01-03 14:25:55,545 - __main__ - INFO - Iniciando escaneo completo de seguridad V16
+2026-01-03 14:25:55,546 - __main__ - INFO - Verificando exposición de datos...
+2026-01-03 14:25:55,824 - __main__ - ERROR - Error accediendo a https://etraffic.dgt.es/etrafficWEB/: Expecting value: line 1 column 1 (char 0)
+2026-01-03 14:25:55,860 - __main__ - ERROR - Error accediendo a https://api.dgt.es/v1/incidents: HTTPSConnectionPool(host='api.dgt.es', port=443): Max retries exceeded with url: /v1/incidents (Caused by NameResolutionError("HTTPSConnection(host='api.dgt.es', port=443): Failed to resolve 'api.dgt.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:25:56,954 - __main__ - ERROR - Error accediendo a https://traffic-data.es/api/v16: HTTPSConnectionPool(host='traffic-data.es', port=443): Max retries exceeded with url: /api/v16 (Caused by NameResolutionError("HTTPSConnection(host='traffic-data.es', port=443): Failed to resolve 'traffic-data.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:25:56,954 - __main__ - INFO - Probando controles de rate limiting...
+2026-01-03 14:26:00,853 - __main__ - WARNING - No se detectó rate limiting
+2026-01-03 14:31:35,053 - __main__ - INFO - Configuración cargada correctamente
+2026-01-03 14:31:35,053 - __main__ - INFO - Iniciando escaneo completo de seguridad V16
+2026-01-03 14:31:35,053 - __main__ - INFO - Verificando exposición de datos...
+2026-01-03 14:31:35,299 - __main__ - ERROR - Error accediendo a https://etraffic.dgt.es/etrafficWEB/: Expecting value: line 1 column 1 (char 0)
+2026-01-03 14:31:35,375 - __main__ - ERROR - Error accediendo a https://api.dgt.es/v1/incidents: HTTPSConnectionPool(host='api.dgt.es', port=443): Max retries exceeded with url: /v1/incidents (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7cbd232e1df0>: Failed to resolve 'api.dgt.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:31:35,494 - __main__ - ERROR - Error accediendo a https://traffic-data.es/api/v16: HTTPSConnectionPool(host='traffic-data.es', port=443): Max retries exceeded with url: /api/v16 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7cbd232e20f0>: Failed to resolve 'traffic-data.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:31:35,494 - __main__ - INFO - Probando controles de rate limiting...
+2026-01-03 14:31:39,338 - __main__ - WARNING - No se detectó rate limiting
+2026-01-03 14:40:55,181 - __main__ - INFO - Configuración cargada correctamente
+2026-01-03 14:40:55,182 - __main__ - INFO - Iniciando escaneo completo de seguridad V16
+2026-01-03 14:40:55,182 - __main__ - INFO - Verificando exposición de datos...
+2026-01-03 14:40:55,446 - __main__ - ERROR - Error accediendo a https://etraffic.dgt.es/etrafficWEB/: Expecting value: line 1 column 1 (char 0)
+2026-01-03 14:40:55,486 - __main__ - ERROR - Error accediendo a https://api.dgt.es/v1/incidents: HTTPSConnectionPool(host='api.dgt.es', port=443): Max retries exceeded with url: /v1/incidents (Caused by NameResolutionError("HTTPSConnection(host='api.dgt.es', port=443): Failed to resolve 'api.dgt.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:40:55,699 - __main__ - ERROR - Error accediendo a https://traffic-data.es/api/v16: HTTPSConnectionPool(host='traffic-data.es', port=443): Max retries exceeded with url: /api/v16 (Caused by NameResolutionError("HTTPSConnection(host='traffic-data.es', port=443): Failed to resolve 'traffic-data.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:40:55,699 - __main__ - INFO - Probando controles de rate limiting...
+2026-01-03 14:40:59,415 - __main__ - WARNING - No se detectó rate limiting
+2026-01-03 14:41:54,588 - __main__ - INFO - Configuración cargada correctamente
+2026-01-03 14:41:54,588 - __main__ - INFO - Iniciando escaneo completo de seguridad V16
+2026-01-03 14:41:54,588 - __main__ - INFO - Verificando exposición de datos...
+2026-01-03 14:41:54,863 - __main__ - ERROR - Error accediendo a https://etraffic.dgt.es/etrafficWEB/: Expecting value: line 1 column 1 (char 0)
+2026-01-03 14:41:54,896 - __main__ - ERROR - Error accediendo a https://api.dgt.es/v1/incidents: HTTPSConnectionPool(host='api.dgt.es', port=443): Max retries exceeded with url: /v1/incidents (Caused by NameResolutionError("HTTPSConnection(host='api.dgt.es', port=443): Failed to resolve 'api.dgt.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:41:54,953 - __main__ - ERROR - Error accediendo a https://traffic-data.es/api/v16: HTTPSConnectionPool(host='traffic-data.es', port=443): Max retries exceeded with url: /api/v16 (Caused by NameResolutionError("HTTPSConnection(host='traffic-data.es', port=443): Failed to resolve 'traffic-data.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:41:54,953 - __main__ - INFO - Probando controles de rate limiting...
+2026-01-03 14:41:58,799 - __main__ - WARNING - No se detectó rate limiting
+2026-01-03 14:42:33,586 - __main__ - INFO - Configuración cargada correctamente
+2026-01-03 14:42:33,586 - __main__ - INFO - Iniciando escaneo completo de seguridad V16
+2026-01-03 14:42:33,586 - __main__ - INFO - Verificando exposición de datos...
+2026-01-03 14:42:33,819 - __main__ - ERROR - Error accediendo a https://etraffic.dgt.es/etrafficWEB/: Expecting value: line 1 column 1 (char 0)
+2026-01-03 14:42:33,851 - __main__ - ERROR - Error accediendo a https://api.dgt.es/v1/incidents: HTTPSConnectionPool(host='api.dgt.es', port=443): Max retries exceeded with url: /v1/incidents (Caused by NameResolutionError("HTTPSConnection(host='api.dgt.es', port=443): Failed to resolve 'api.dgt.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:42:34,939 - __main__ - ERROR - Error accediendo a https://traffic-data.es/api/v16: HTTPSConnectionPool(host='traffic-data.es', port=443): Max retries exceeded with url: /api/v16 (Caused by NameResolutionError("HTTPSConnection(host='traffic-data.es', port=443): Failed to resolve 'traffic-data.es' ([Errno -2] Name or service not known)"))
+2026-01-03 14:42:34,939 - __main__ - INFO - Probando controles de rate limiting...
+2026-01-03 14:42:38,378 - __main__ - WARNING - No se detectó rate limiting
