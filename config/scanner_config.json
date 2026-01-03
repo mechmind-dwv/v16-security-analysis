@@ -1,0 +1,20 @@
+{
+  "scanning": {
+    "frequency": "hourly",
+    "deep_scan_interval": "daily",
+    "concurrent_scans": 5
+  },
+  "vulnerability_checks": {
+    "data_exposure": true,
+    "authentication_bypass": true,
+    "rate_limit_test": true,
+    "encryption_check": true,
+    "api_endpoint_discovery": true
+  },
+  "reporting": {
+    "generate_pdf": true,
+    "generate_csv": true,
+    "send_alerts": false,
+    "min_severity": "MEDIUM"
+  }
+}
