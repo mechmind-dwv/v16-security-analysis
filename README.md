@@ -1,4 +1,3 @@
-```markdown
 # 🚨 Mapa de Vulnerabilidad en Tiempo Real: Balizas V16 DGT
 
 > **⚠️ CRITICAL SECURITY ADVISORY** | **⚠️ AVISO DE SEGURIDAD CRÍTICA**
