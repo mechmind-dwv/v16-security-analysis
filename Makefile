@@ -65,7 +65,11 @@ simulate:
 
 test:
 	@echo "$(YELLOW)Ejecutando pruebas...$(NC)"
-	$(PYTHON) -m pytest tests/ -v
+	@if [ -d "tests" ]; then \
+		$(PYTHON) -m pytest tests/ -v; \
+	else \
+		echo "$(YELLOW)No hay tests configurados$(NC)"; \
+	fi
 
 lint:
 	@echo "$(YELLOW)Verificando estilo de código...$(NC)"

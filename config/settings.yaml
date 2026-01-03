@@ -1,20 +1,20 @@
 # Configuración del Sistema de Análisis V16
-version: "1.0.0"
-environment: "production"
+version: "1.0.1"
+environment: "development"
 
 api_endpoints:
   dgt_map: "https://mapabalizasv16.es/#mapa"
   dgt_api: "https://etraffic.dgt.es/etrafficWEB/"
-  # Endpoints alternativos para resiliencia
-  fallback_endpoints:
-    - "https://api.dgt.es/v1/incidents"
-    - "https://traffic-data.es/api/v16"
+  # Endpoints reales conocidos
+  known_endpoints:
+    - "https://mapabalizasv16.es/api/incidents"
+    - "https://mapa.dgt.es/incidencias"
 
 security:
   rate_limit: 10  # requests por minuto
   timeout: 30     # segundos
   retry_attempts: 3
-  user_agent: "V16-Security-Audit/1.0.0"
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
 data_handling:
   anonymization:
@@ -23,7 +23,7 @@ data_handling:
     time_delay: 15    # minutos de retraso en publicación
   storage:
     max_days: 30
-    encryption: true
+    encryption: false
     backup_frequency: "daily"
 
 logging:
