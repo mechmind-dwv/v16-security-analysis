@@ -6,8 +6,6 @@
 >
 > **Español**: Este repositorio documenta una falla sistémica de seguridad en el sistema obligatorio de balizas V16 de España, exponiendo ubicaciones en tiempo real de víctimas a acceso no autorizado.
 
-[![Security Status](https://img.shields.io/badge/Security-Critical-red.svg)](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-65855)
-[![License: CC0](https://img.shields.io/badge/License-CC0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 [![API Status](https://img.shields.io/badge/API-Official%20DGT-blue.svg)](https://etraffic.dgt.es/etrafficWEB/)
 [![GitHub Stars](https://img.shields.io/github/stars/mechmind-dwv/v16-security-analysis)](https://github.com/mechmind-dwv/v16-security-analysis/stargazers)
 [![GitHub Issues](https://img.shields.io/github/issues/mechmind-dwv/v16-security-analysis)](https://github.com/mechmind-dwv/v16-security-analysis/issues)
@@ -350,8 +348,8 @@ Respuesta en 24 horas laborables.
 Asegura tus sistemas, o el vacío los reclamará."**  
 — Maestro Cósmico Developer
 
-[![Estrellas](https://img.shields.io/github/stars/cosmic-dev/v16-vulnerability-map?style=social)](https://github.com/mechmind-dwv/v16-security-analysis)
-[![Issues](https://img.shields.io/github/issues/cosmic-dev/v16-vulnerability-map)](https://github.com/mechmind-dwv/v16-security-analysis/issues)
-[![Último Commit](https://img.shields.io/github//v/v16-vulnerability-map)](https://github.com/mechmind-dwv/v16-security-analysis/commits/main)
+[![Estrellas](https://img.shields.io/github/stars/mechmind-dwv/v16-security-analysis?style=social)](https://github.com/mechmind-dwv/v16-security-analysis)
+[![Issues](https://img.shields.io/github/issues/mechmind-dwv/v16-security-analysis)](https://github.com/mechmind-dwv/v16-security-analysis/issues)
+[![Último Commit](https://img.shields.io/github//v/mechmind-dwv/v16-security-analysis)](https://github.com/mechmind-dwv/v16-security-analysis/commits/main)
 
 </div>
