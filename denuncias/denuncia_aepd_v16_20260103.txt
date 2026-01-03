@@ -1,0 +1,30 @@
+DENUNCIA - VIOLACIÓN RGPD - SISTEMA V16 DGT
+============================================================
+
+Fecha: 03/01/2026
+Destinatario: Agencia Española de Protección de Datos (AEPD)
+
+DATOS DEL DENUNCIANTE:
+- nombre: [NOMBRE]
+- dni: [DNI]
+- email: [EMAIL]
+- telefono: [TELÉFONO]
+
+HECHOS:
+• El sistema de balizas V16 de la Dirección General de Tráfico expone en tiempo real y sin controles de acceso:
+• 1. Ubicación exacta de conductores en situación de emergencia
+• 2. Información del vehículo y tiempo exacto de la incidencia
+• 3. Datos de municipio, provincia y carretera específica
+• 4. Dirección de viaje y punto kilométrico exacto
+
+VIOLACIONES DEL RGPD:
+• Artículo 5: Principios relativos al tratamiento - Falta de licitud, lealtad y transparencia
+• Artículo 25: Protección de datos desde el diseño y por defecto - No se implementaron medidas técnicas adecuadas
+• Artículo 32: Seguridad del tratamiento - No se garantiza confidencialidad e integridad
+• Artículo 35: Evaluación de impacto - No se realizó evaluación de impacto en la protección de datos
+
+PETICIONES:
+1. Que se inicie procedimiento sancionador contra la DGT
+2. Que se ordene el cese inmediato de la exposición de datos
+3. Que se realice auditoría de seguridad del sistema
+4. Que se notifique a los afectados la violación de sus datos
