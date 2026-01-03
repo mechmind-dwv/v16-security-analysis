@@ -10,77 +10,81 @@ PYTHON = $(VENV)/bin/python
 PIP = $(VENV)/bin/pip
 SCRIPTS_DIR = scripts
 
-# Colores
-GREEN = \033[0;32m
-YELLOW = \033[1;33m
-RED = \033[0;31m
-NC = \033[0m
-
 help:
-	@echo "$(YELLOW)Sistema de Análisis V16 - Comandos disponibles:$(NC)"
+	@echo "Sistema de Análisis V16 - Comandos disponibles:"
 	@echo ""
-	@echo "$(GREEN)Instalación:$(NC)"
+	@echo "Instalación:"
 	@echo "  make install       Instala el sistema completo"
 	@echo "  make deps          Instala solo dependencias"
 	@echo ""
-	@echo "$(GREEN)Análisis:$(NC)"
+	@echo "Análisis:"
 	@echo "  make scan          Ejecuta escaneo de vulnerabilidades"
 	@echo "  make anonymize     Anonimiza datos de muestra"
 	@echo "  make simulate      Ejecuta simulación de impacto"
+	@echo "  make map-analyze   Analiza datos del mapa V16"
+	@echo "  make test-api      Prueba endpoints DGT"
 	@echo ""
-	@echo "$(GREEN)Desarrollo:$(NC)"
+	@echo "Desarrollo:"
 	@echo "  make test          Ejecuta pruebas"
 	@echo "  make lint          Verifica estilo de código"
 	@echo "  make format        Formatea código automáticamente"
 	@echo ""
-	@echo "$(GREEN)Limpieza:$(NC)"
+	@echo "Limpieza:"
 	@echo "  make clean         Limpia archivos temporales"
 	@echo "  make clean-all     Limpia todo (incluye venv)"
 
 install:
-	@echo "$(YELLOW)Instalando sistema...$(NC)"
+	@echo "Instalando sistema..."
 	chmod +x setup.sh
 	./setup.sh
 
 deps:
-	@echo "$(YELLOW)Instalando dependencias...$(NC)"
+	@echo "Instalando dependencias..."
 	$(PIP) install -r requirements.txt
 
 scan:
-	@echo "$(YELLOW)Ejecutando escaneo de vulnerabilidades...$(NC)"
+	@echo "Ejecutando escaneo de vulnerabilidades..."
 	$(PYTHON) $(SCRIPTS_DIR)/vulnerability-scanner.py
 
 anonymize:
-	@echo "$(YELLOW)Anonimizando datos...$(NC)"
+	@echo "Anonimizando datos..."
 	@if [ -f "data/sample.json" ]; then \
 		$(PYTHON) $(SCRIPTS_DIR)/data-anonymizer.py data/sample.json data/anonymized.json; \
 	else \
-		echo "$(RED)Error: data/sample.json no encontrado$(NC)"; \
-		echo "Crea un archivo de muestra primero o especifica uno diferente"; \
+		echo "Error: data/sample.json no encontrado"; \
+		echo "Crea un archivo de muestra primero: make sample"; \
 	fi
 
 simulate:
-	@echo "$(YELLOW)Ejecutando simulación de impacto...$(NC)"
+	@echo "Ejecutando simulación de impacto..."
 	$(PYTHON) $(SCRIPTS_DIR)/impact-simulator.py --visualize
 
+map-analyze:
+	@echo "Analizando datos del mapa V16..."
+	$(PYTHON) $(SCRIPTS_DIR)/v16-map-analyzer.py
+
+test-api:
+	@echo "Probando endpoints DGT..."
+	$(PYTHON) $(SCRIPTS_DIR)/test-api.py
+
 test:
-	@echo "$(YELLOW)Ejecutando pruebas...$(NC)"
+	@echo "Ejecutando pruebas..."
 	@if [ -d "tests" ]; then \
 		$(PYTHON) -m pytest tests/ -v; \
 	else \
-		echo "$(YELLOW)No hay tests configurados$(NC)"; \
+		echo "No hay tests configurados"; \
 	fi
 
 lint:
-	@echo "$(YELLOW)Verificando estilo de código...$(NC)"
+	@echo "Verificando estilo de código..."
 	$(PYTHON) -m flake8 scripts/ --max-line-length=100 --ignore=E402,W503
 
 format:
-	@echo "$(YELLOW)Formateando código...$(NC)"
+	@echo "Formateando código..."
 	$(PYTHON) -m black scripts/ --line-length=100
 
 clean:
-	@echo "$(YELLOW)Limpieza de archivos temporales...$(NC)"
+	@echo "Limpieza de archivos temporales..."
 	rm -rf data/processed/*
 	rm -rf data/reports/*.json
 	rm -rf logs/*.log
@@ -90,14 +94,14 @@ clean:
 	find . -name ".coverage" -delete
 
 clean-all: clean
-	@echo "$(YELLOW)Limpieza completa...$(NC)"
+	@echo "Limpieza completa..."
 	rm -rf $(VENV)
 	rm -rf .pytest_cache
 	rm -rf .coverage htmlcov
 
 # Crear archivo de muestra para pruebas
 sample:
-	@echo "$(YELLOW)Creando datos de muestra...$(NC)"
+	@echo "Creando datos de muestra..."
 	@cat > data/sample.json << 'SAMPLE'
 [
   {
@@ -120,4 +124,4 @@ sample:
   }
 ]
 SAMPLE
-	@echo "$(GREEN)Archivo de muestra creado: data/sample.json$(NC)"
+	@echo "Archivo de muestra creado: data/sample.json"
