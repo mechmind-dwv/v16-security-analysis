@@ -2,9 +2,8 @@
 # MAKEFILE - SISTEMA DE ANÁLISIS V16
 # ============================================
 
-.PHONY: help install test scan anonymize simulate clean
+.PHONY: help install deps scan anonymize simulate map-analyze test-api clean clean-all sample
 
-# Variables
 VENV = venv
 PYTHON = $(VENV)/bin/python
 PIP = $(VENV)/bin/pip
@@ -24,12 +23,9 @@ help:
 	@echo "  make map-analyze   Analiza datos del mapa V16"
 	@echo "  make test-api      Prueba endpoints DGT"
 	@echo ""
-	@echo "Desarrollo:"
-	@echo "  make test          Ejecuta pruebas"
-	@echo "  make lint          Verifica estilo de código"
-	@echo "  make format        Formatea código automáticamente"
-	@echo ""
-	@echo "Limpieza:"
+	@echo "Utilidades:"
+	@echo "  make sample        Crea datos de muestra"
+	@echo "  make report        Genera informe ejecutivo"
 	@echo "  make clean         Limpia archivos temporales"
 	@echo "  make clean-all     Limpia todo (incluye venv)"
 
@@ -67,42 +63,14 @@ test-api:
 	@echo "Probando endpoints DGT..."
 	$(PYTHON) $(SCRIPTS_DIR)/test-api.py
 
-test:
-	@echo "Ejecutando pruebas..."
-	@if [ -d "tests" ]; then \
-		$(PYTHON) -m pytest tests/ -v; \
-	else \
-		echo "No hay tests configurados"; \
-	fi
+report:
+	@echo "Generando informe ejecutivo..."
+	$(PYTHON) scripts/generate-report.py
 
-lint:
-	@echo "Verificando estilo de código..."
-	$(PYTHON) -m flake8 scripts/ --max-line-length=100 --ignore=E402,W503
-
-format:
-	@echo "Formateando código..."
-	$(PYTHON) -m black scripts/ --line-length=100
-
-clean:
-	@echo "Limpieza de archivos temporales..."
-	rm -rf data/processed/*
-	rm -rf data/reports/*.json
-	rm -rf logs/*.log
-	rm -rf __pycache__ scripts/__pycache__ scripts/utils/__pycache__
-	find . -name "*.pyc" -delete
-	find . -name "*.pyo" -delete
-	find . -name ".coverage" -delete
-
-clean-all: clean
-	@echo "Limpieza completa..."
-	rm -rf $(VENV)
-	rm -rf .pytest_cache
-	rm -rf .coverage htmlcov
-
-# Crear archivo de muestra para pruebas
 sample:
 	@echo "Creando datos de muestra..."
-	@cat > data/sample.json << 'SAMPLE'
+	@mkdir -p data
+	@cat > data/sample.json << "SAMPLE_EOF"
 [
   {
     "id": "INC_001",
@@ -123,5 +91,22 @@ sample:
     "device_id": "V16-67890"
   }
 ]
-SAMPLE
+SAMPLE_EOF
 	@echo "Archivo de muestra creado: data/sample.json"
+
+clean:
+	@echo "Limpieza de archivos temporales..."
+	rm -rf data/processed/*
+	rm -rf data/reports/*.json
+	rm -rf logs/*.log
+	rm -rf __pycache__ scripts/__pycache__ scripts/utils/__pycache__
+	find . -name "*.pyc" -delete
+	find . -name "*.pyo" -delete
+	find . -name ".coverage" -delete
+
+clean-all: clean
+	@echo "Limpieza completa..."
+	rm -rf $(VENV)
+	rm -rf .pytest_cache
+	rm -rf .coverage htmlcov
+
